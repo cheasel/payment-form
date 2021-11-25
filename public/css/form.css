@@ -17,7 +17,3 @@ body {
 .error.true {
     color: #6bc900;
 }
-
-.alert {
-    display: none;
-}

@@ -12,8 +12,10 @@ class PaymentController extends Controller
         $birthdate = $request->birthdate;
         $tel = $request->phone;
 
-        if ( DB::table('payment_info')->where('id', $id)->exists() || DB::table('payment_info')->where('tel', $tel)->exists() ) {
-            return back();
+        if ( DB::table('payment_info')->where('id', $id)->exists() ) {
+            return back()->withErrors(['msg' => 'เลขบัตรประชาชนซ้ำ']);
+        }elseif ( DB::table('payment_info')->where('tel', $tel)->exists() ) {
+            return back()->withErrors(['msg' => 'หมายเลขโทรศัพท์ซ้ำ']);
         }
 
         $data = array('id'=>$id,"birthdate"=>$birthdate,"tel"=>$tel);

@@ -28,14 +28,16 @@
                 <div class="col-lg-6 mx-auto">
                     <div class="card ">
                         <div class="card-header">
-                            <div id="succes-alert" class="alert alert-success alert-dismissible">
+                            <!--<div id="succes-alert" class="alert alert-success alert-dismissible">
                                 <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                                 ลงทะเบียนข้อมูลสำเร็จ
-                            </div>
+                            </div>-->
+                            @if($errors->any())
                             <div id="fail-alert" class="alert alert-danger alert-dismissible">
                                 <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                                ลงทะเบียนข้อมูลไม่สำเร็จ
+                                {{ $errors->first()}}
                             </div>
+                            @endif
                             <div class="tab-content">
                                 <div id="credit-card" class="tab-pane fade show active pt-3">
                                     <form id="Form" action="/store" method="POST" enctype="multipart/form-data">
