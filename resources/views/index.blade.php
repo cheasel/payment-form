@@ -38,7 +38,7 @@
                             </div>
                             <div class="tab-content">
                                 <div id="credit-card" class="tab-pane fade show active pt-3">
-                                    <form id="Form" method="POST" enctype="multipart/form-data">
+                                    <form id="Form" action="/store" method="POST" enctype="multipart/form-data">
                                         @csrf
                                         <div class="form-group"> 
                                             <label for="idcard">
@@ -109,11 +109,11 @@
             }
 
             ////    Form submit     ////
-            $('#Form').submit(function (e) {
+            /*$('#Form').submit(function (e) {
                 e.preventDefault();
                 if( check_validate() == false ) return 0;
                 register();
-            });
+            });*/
 
             ////    Check Form is validate  ////
             function check_validate(){

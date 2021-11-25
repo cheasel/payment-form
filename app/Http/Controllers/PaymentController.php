@@ -13,12 +13,18 @@ class PaymentController extends Controller
         $tel = $request->phone;
 
         if ( DB::table('payment_info')->where('id', $id)->exists() || DB::table('payment_info')->where('tel', $tel)->exists() ) {
-            return false;
+            return back();
         }
 
         $data = array('id'=>$id,"birthdate"=>$birthdate,"tel"=>$tel);
         $result = DB::table('payment_info')->insert($data);
         //dd($result);
-        return $result;
+        return view("otp", ["phone"=>$tel]);
+    }
+
+    public function otp(Request $request){
+        $tel = $request->phone;
+
+        return view("success-otp", ["phone"=>$tel]);
     }
 }

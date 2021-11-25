@@ -17,4 +17,13 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/otp', function () {
+    return view('otp');
+});
+
+Route::get('/success', function () {
+    return view('success-otp');
+});
+
 Route::post('/store', "App\Http\Controllers\PaymentController@store");
+Route::post('/otp', "App\Http\Controllers\PaymentController@otp");
