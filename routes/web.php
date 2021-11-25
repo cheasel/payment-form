@@ -26,4 +26,4 @@ Route::get('/success', function () {
 });
 
 Route::post('/store', "App\Http\Controllers\PaymentController@store");
-Route::post('/otp', "App\Http\Controllers\PaymentController@otp");
+Route::post('/success-otp', "App\Http\Controllers\PaymentController@otp");

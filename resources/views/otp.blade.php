@@ -30,7 +30,7 @@
                         <div class="card-header">
                             <div class="tab-content">
                                 <div id="credit-card" class="tab-pane fade show active pt-3">
-                                    <form id="Form" action="/otp" method="POST" enctype="multipart/form-data">
+                                    <form id="Form" action="/success-otp" method="POST" enctype="multipart/form-data">
                                         @csrf
                                         <div class="form-group"> 
                                             <input type="hidden" id="phone" name="phone" value="{{ $phone }}" class="form-control "> 
