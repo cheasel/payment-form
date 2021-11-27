@@ -39,9 +39,9 @@
                                             </label> 
                                             <div class="input-group">
                                                 <input type="text" id="otp" name="otp" placeholder="" maxlength="6" required class="form-control "> 
-                                                <div class="input-group-append"> <span class="input-group-text text-muted"> <div id="send-otp" class="send-otp"> ส่งรหัส otp </div> </span> </div>
+                                                <div class="input-group-append"> <!--<span class="input-group-text text-muted"> <div id="send-otp" class="send-otp"> ส่งรหัส otp </div> </span>--> </div>
                                             </div>
-                                            <span id="explain" class="explain"> ใส่หมายเลขที่ส่งไปยัง {{ $phone }}</span>
+                                            <!--<span id="explain" class="explain"> ใส่หมายเลขที่ส่งไปยัง </span>-->
                                         </div>
                                         <div class="card-footer"> 
                                             <input type="submit" id="submit" class="subscribe btn btn-primary btn-block shadow-sm" value="ยืนยัน">

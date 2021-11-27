@@ -15,6 +15,10 @@
         <script src="https://use.fontawesome.com/releases/v5.8.1/css/all.css" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" crossorigin="anonymous"></script>
         <title></title>
+
+        <?php
+            $json_string = json_encode($result, JSON_PRETTY_PRINT);
+        ?>
     </head>
 
     <body>
@@ -24,14 +28,17 @@
                     <div class="card ">
                         <div class="card-header">
                             <div class="tab-content pt-3 text-center">
-                                <div class="tick">
+                                <!--<div class="tick">
                                     <img src="/img/tick.png">
                                 </div>
                                 <h2 style="color:#0fad00">ยืนยันสำเร็จ</h2>
-                                <p class="my-3"> ยืนยัน OTP ด้วยโทรศัพท์หมายเลข {{ $phone }} สำเร็จ </p>
-                                <div class="home">
+                                <p class="my-3"> ยืนยัน OTP ด้วยโทรศัพท์หมายเลข สำเร็จ </p>-->
+                                
+                                <pre> {{ $json_string }} </pre>
+                                
+                                <!--<div class="home">
                                     <a href="/" class="subscribe btn btn-primary btn-block shadow-sm"> กลับหน้าแรก </a>
-                                </div>
+                                </div>-->
                             </div> 
                         </div>
                     </div>

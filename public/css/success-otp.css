@@ -30,7 +30,11 @@ p {
 }
 
 .home {
-    margin: 40px auto 0 auto;
+    margin: 25px auto 0 auto;
     width: fit-content;
     height: 50px;
+}
+
+pre {
+    text-align: left;
 }
