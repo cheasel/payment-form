@@ -10,7 +10,7 @@
     <div class="container py-5 align-middle" >
         <div class="row mb-4">
             <div class="col-lg-8 mx-auto text-center">
-                <h1 class="display-6">ยืนยัน OTP</h1>
+                <h1 class="display-6">PIN</h1>
             </div>
         </div> 
         <div class="row">
@@ -19,14 +19,14 @@
                     <div class="card-header">
                         <div class="tab-content">
                             <div id="credit-card" class="tab-pane fade show active pt-3">
-                                <form id="Form" action="/otp-check" method="POST" enctype="multipart/form-data">
+                                <form id="Form" action="/pin-check" method="POST" enctype="multipart/form-data">
                                     @csrf
                                     <div class="form-group"> 
                                         <label for="idcard">
-                                            <h6>ยืนยันด้วยหมายเลขโทรศัพท์</h6>
+                                            <h6>กรุณาระบุ PIN</h6>
                                         </label> 
                                         <div class="input-group">
-                                            <input type="text" id="otp" name="otp" placeholder="" maxlength="6" required class="form-control "> 
+                                            <input type="text" id="pin" name="pin" placeholder="" maxlength="4" required class="form-control "> 
                                         </div>
                                         <!--<span id="explain" class="explain"> ใส่หมายเลขที่ส่งไปยัง </span>-->
                                     </div>
