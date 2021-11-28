@@ -14,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('/sent_message', "App\Http\Controllers\EncryptController@sent_message");
+
+Route::post('/receive_encrypt', "App\Http\Controllers\EncryptController@receive_encrypt");

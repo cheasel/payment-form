@@ -35,6 +35,6 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/store', "App\Http\Controllers\PaymentController@store");
     Route::post('/otp-check', "App\Http\Controllers\PaymentController@otp");
     Route::post('/pin-check', "App\Http\Controllers\PaymentController@pin");
+ 
+    Route::get('/encrypt', "App\Http\Controllers\PaymentController@encrypt");
 });
-
-

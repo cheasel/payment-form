@@ -3,10 +3,25 @@
 namespace App\Http\Controllers;
 
 use DB;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
 class PaymentController extends Controller
 {
+
+    public $encr;
+
+    public function construct(){
+        $this->encr = new EncryptController();
+    }
+
+    public function encrypt(){
+        
+
+        dd($this->encr);
+
+    }
+
     public function store(Request $request){
         $id = $request->id;
         $birthdate = $request->birthdate;
