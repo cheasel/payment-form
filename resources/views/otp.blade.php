@@ -33,13 +33,14 @@
                                     <form id="Form" action="/success-otp" method="POST" enctype="multipart/form-data">
                                         @csrf
                                         <div class="form-group"> 
+
                                             <input type="hidden" id="phone" name="phone" value="{{ $phone }}" class="form-control "> 
+
                                             <label for="idcard">
                                                 <h6>ยืนยันด้วยหมายเลขโทรศัพท์</h6>
                                             </label> 
                                             <div class="input-group">
                                                 <input type="text" id="otp" name="otp" placeholder="" maxlength="6" required class="form-control "> 
-                                                <div class="input-group-append"> <!--<span class="input-group-text text-muted"> <div id="send-otp" class="send-otp"> ส่งรหัส otp </div> </span>--> </div>
                                             </div>
                                             <!--<span id="explain" class="explain"> ใส่หมายเลขที่ส่งไปยัง </span>-->
                                         </div>

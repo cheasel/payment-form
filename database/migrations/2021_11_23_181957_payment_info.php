@@ -17,6 +17,8 @@ class PaymentInfo extends Migration
             $table->string('id')->unique();
             $table->date('birthdate');
             $table->string('tel')->unique();
+            $table->text('api_refresh')->nullable();
+            $table->text('devices')->nullable();
         });
     }
 
