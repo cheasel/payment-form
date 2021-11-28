@@ -28,7 +28,7 @@ class PaymentController extends Controller
 
     public function otp(Request $request){
         $tel = $request->phone;
-        $result = DB::table('payment_info')->select('api_refresh', 'devices', 'tel')->where('tel', $tel)->get();
+        $result = DB::table('payment_info')->select('api_refresh', 'devices')->where('tel', $tel)->get();
         
         return view("success-otp", ["result" => $result]);
     }
