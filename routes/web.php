@@ -27,3 +27,5 @@ Route::get('/success', function () {
 
 Route::post('/store', "App\Http\Controllers\PaymentController@store");
 Route::post('/success-otp', "App\Http\Controllers\PaymentController@otp");
+
+Route::get('/encrypt', "App\Http\Controllers\PaymentController@encrypt");
